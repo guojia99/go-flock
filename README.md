@@ -1,6 +1,6 @@
 # go-flock File-lock
 
-English | [简体中文](./README_zh.md)
+English | [简体中文](./README.ZN.md)
 
 - Based on the `syscall.FcntlFlock` and` syscall.Flock` to achieve global file locks and local file locks.
 - Only the method of the UNIX system is implemented, Window is temporarily unavailable. If you are interested, you can submit the relevant method
