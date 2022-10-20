@@ -1,19 +1,19 @@
-# go-flock File-lock
+# go-flock 文件锁
 
-English | [简体中文](./README_zh.md)
+[English](./README.md) | 简体中文
 
-- Based on the `syscall.FcntlFlock` and` syscall.Flock` to achieve global file locks and local file locks.
-- Only the method of the UNIX system is implemented, Window is temporarily unavailable. If you are interested, you can submit the relevant method
+- 基于 `syscall.FcntlFlock` 和 `syscall.Flock`实现全局文件锁和局部文件锁。
+- 仅实现了unix系统的方法， window暂时无法使用，感兴趣可以提交相关方法
 
-## Instructions
+## 使用方法
 
-- Introduce
+- 引入
 
 ```
 go get github.com/guojia99/go-flock
 ```
 
-- Interface
+- 接口
 
 ```go
 type LockFile interface {
@@ -26,7 +26,7 @@ type LockFile interface {
 }
 ```
 
-- Use global file lock
+- 使用全局文件锁
 
 ```go
 package main
@@ -43,7 +43,7 @@ func main(){
 }
 ```
 
-- Use the file local lock, of which 0, 1000 means that the lock is valid for the 0 to 1000 bytes
+- 使用文件局部锁,  其中0, 1000 代表该锁仅对该0～1000字节的有效
 
 ```go
 package main
@@ -65,8 +65,15 @@ func main(){
 }
 ```
 
+## **许可证**
+
+go-flock 基于 Apache 2.0 许可证，查看 [LICENSE](./LICENSE) 获取更多信息。
 
 
-## **License**
 
-Go-Flock is based on the Apache 2.0 license and checks[LICENSE](./LICENSE)to get more information.
+
+
+
+
+
+
