@@ -44,9 +44,9 @@ const (
 
 	// use in syscall.FcntlFlock() function
 	// blockLockGet On input to this call, lock describes a lock we would like to place on the file.
-	// If the lock could be placed, FcntlFlock() does not actually place it, but returns F_UNLCK in the l_type field of lock
+	// If the lock could be placed, syscall.FcntlFlock() does not actually place it, but returns syscall.F_UNLCK in the l_type field of lock
 	// and leaves the other fields of the structure unchanged. If one or more incompatible locks would prevent this
-	// lock being placed, then FcntlFlock() returns details about one of these locks in the l_type, l_whence, l_start,
+	// lock being placed, then syscall.FcntlFlock() returns details about one of these locks in the l_type, l_whence, l_start,
 	// and l_len fields of lock and sets l_pid to be the PID of the process holding that lock.
 	blockLockGet = syscall.F_GETLK
 	// blockLockSet as for syscall.F_SETLK, but if a conflicting lock is held on the file,
